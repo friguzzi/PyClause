@@ -45,14 +45,16 @@ class BuildExt(build_ext):
     if ct == "unix":
       opts.append('-DVERSION_INFO="%s"' % self.distribution.get_version())
       opts.append(cpp_flag(self.compiler))
-      opts.append("-fopenmp") # assumes openmp is supported
+     # opts.append("-fopenmp") # assumes openmp is supported
+      opts.append("-Xclang -fopenmp")
+      opts.append("-I/opt/homebrew/opt/libomp/include")
       # opts.append("-w") # uncommment to suppress warnings
     elif ct == "msvc":
       opts.append('/DVERSION_INFO=\\"%s\\"' % self.distribution.get_version())
       opts.append("/openmp")
     for ext in self.extensions:
       ext.extra_compile_args = opts
-      ext.extra_link_args = ["-fopenmp"] # assumes openmp is supported
+      ext.extra_link_args = ["-L/opt/homebrew/opt/libomp/lib","-lomp"] # assumes openmp is supported
     build_ext.build_extensions(self)
 
 ext_modules = [
