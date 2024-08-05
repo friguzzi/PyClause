@@ -1,6 +1,12 @@
+.. image:: https://raw.githubusercontent.com/symbolic-kg/PyClause/master/docs/logo/PyClause/proc/PyClause-transparent.png
+   :align: left
+   :width: 35%
 
-PyClause: Symbolic Rules for Knowledge Graphs
-=============================================
+.. raw:: html
+
+   <br clear="all"/>
+
+
 Welcome to the documentation of PyClause. PyClause allows you to use and learn symbolic rules (clauses) in a simple yet efficient manner by using Python. All usable options are well documented and can be stored in user defined configuration files. 
 
 
@@ -20,10 +26,10 @@ By exclusively using Python, with PyClause you can:
 
 Possible workflows with PyClause allow to:
 
-- load data KGs and rules solely from Python and serialize the results back to Python
-- load data KGs and rules from disk and write back the results to disk for efficiency
-- handle KG data and inputs as indexes, e.g., from numpy arrays, or with string names for the generation of readable examples
-- work with and store user defined configuration files, based on a `default-configuration file <https://github.com/symbolic-kg/PyClause/blob/master/clause/config-default.yaml>`_
+- Load data KGs and rules solely from Python and serialize the results back to Python
+- Load data KGs and rules from disk and write back the results to disk for efficiency
+- Handle KG data and inputs as indexes, e.g., from numpy arrays, or with string names for the generation of readable examples
+- Work with and store user defined configuration files, based on a `default-configuration file <https://github.com/symbolic-kg/PyClause/blob/master/clause/config-default.yaml>`_
 
 
 .. toctree::

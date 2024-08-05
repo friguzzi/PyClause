@@ -31,7 +31,7 @@ def cpp_flag(compiler):
   raise RuntimeError("Unsupported compiler: at least C++14 support is needed")
 
 
-# (c) Sylvain Corlay, https://github.com/pybind/python_example
+# adapted from (c) Sylvain Corlay, https://github.com/pybind/python_example
 class BuildExt(build_ext):
 
   c_opts = {
@@ -72,6 +72,7 @@ ext_modules = [
 
 setup(
   name                  = "PyClause",
+  version               = "0.0.1",
   ext_modules           = ext_modules,
   install_requires      = ["pybind11>=2.2.0", "numpy", "flatdict", "pyyaml"],
   cmdclass              = {"build_ext": BuildExt},
